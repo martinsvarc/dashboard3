@@ -18,7 +18,7 @@ export default async function DashboardPage() {
 
   const calculateAverage = (field: string) => {
     const sum = callLogs?.reduce((acc, log) => acc + (log[field] || 0), 0)
-    return callLogs?.length ? (sum / callLogs.length).toFixed(1) : 0
+    return callLogs?.length ? (sum / callLogs.length).toFixed(1) : '0'
   }
 
   const averageScores = {
@@ -31,7 +31,7 @@ export default async function DashboardPage() {
   }
 
   const totalCallLength = callLogs?.reduce((acc, log) => acc + (log['Call Length'] || 0), 0)
-  const averageCallLength = callLogs?.length ? (totalCallLength / callLogs.length).toFixed(2) : 0
+  const averageCallLength = callLogs?.length ? (totalCallLength / callLogs.length).toFixed(2) : '0'
 
   return (
     <div className="flex-1 space-y-4 p-8 pt-6">
@@ -85,7 +85,7 @@ export default async function DashboardPage() {
             <CardTitle>Recent Sales Calls</CardTitle>
           </CardHeader>
           <CardContent>
-            <RecentSales callLogs={callLogs} />
+            <RecentSales callLogs={callLogs || []} />
           </CardContent>
         </Card>
       </div>
