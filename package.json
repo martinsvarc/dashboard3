@@ -1,0 +1,11 @@
+{
+  "name": "vapi-sales-coaches-dashboard",
+  "version": "1.0.0",
+  "dependencies": {
+    "@supabase/auth-helpers-nextjs": "latest",
+    "@supabase/supabase-js": "latest",
+    "date-fns": "latest",
+    "recharts": "latest",
+    "@radix-ui/react-icons": "latest"
+  }
+}
