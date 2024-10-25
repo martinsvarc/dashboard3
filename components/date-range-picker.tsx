@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { CalendarIcon } from "@radix-ui/react-icons"
+import { CalendarIcon } from "lucide-react"
 import { addDays, format } from "date-fns"
 import { DateRange } from "react-day-picker"
 
@@ -49,7 +49,7 @@ export function CalendarDateRangePicker({
             )}
           </Button>
         </PopoverTrigger>
-        <PopoverContent className="w-auto p-0" align="end">
+        <PopoverContent className="w-auto p-0" align="start">
           <Calendar
             initialFocus
             mode="range"
